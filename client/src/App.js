@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 import './App.css';
 import httpClient from './httpClient'
 
-
+import LogIn from './views/LogIn'
 
 class App extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import httpClient from '../httpClient'
 
-class Login extends React.Component {
+class LogIn extends React.Component {
 
     state = {
         fields: { email: '', password: '' }
@@ -47,4 +47,4 @@ class Login extends React.Component {
 
 }
 
-export default Login
+export default LogIn
