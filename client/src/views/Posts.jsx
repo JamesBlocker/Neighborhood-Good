@@ -7,7 +7,7 @@ class Posts extends React.Component {
     componentDidMount() {
         httpClient.getPosts().then((serverResponse) => {
             console.log(serverResponse.data)
-            this.setState({ bars: serverResponse.data })
+            this.setState({ posts: serverResponse.data })
         })
     }
 

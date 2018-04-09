@@ -8,6 +8,7 @@ import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Home from './views/Home'
 import Posts from './views/Posts'
+import NewPost from './views/NewPost'
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
   }
 
   render() {
+    const { currentUser } = this.state
     return (
       <div className="App container">
         
@@ -38,6 +40,12 @@ class App extends Component {
           <Route path="/signup" render={(props) => {
             return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
           }} />
+
+          <Route path="/posts/new" render={(routeProps) => {
+						return currentUser
+						? <NewPost {...routeProps}/>
+						: <Redirect to="/login" />
+					}} />
 
           <Route path="/posts" component={Posts} />
 
