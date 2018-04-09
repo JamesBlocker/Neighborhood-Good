@@ -7,6 +7,7 @@ import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Home from './views/Home'
+import Posts from './views/Posts'
 
 class App extends Component {
 
@@ -37,6 +38,8 @@ class App extends Component {
           <Route path="/signup" render={(props) => {
             return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
           }} />
+
+          <Route path="/posts" component={Posts} />
 
           <Route path="/" component={Home} />
 
