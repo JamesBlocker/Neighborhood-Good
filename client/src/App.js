@@ -6,6 +6,7 @@ import httpClient from './httpClient'
 import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
+import Home from './views/Home'
 
 class App extends Component {
 
@@ -36,6 +37,8 @@ class App extends Component {
           <Route path="/signup" render={(props) => {
             return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
           }} />
+
+          <Route path="/" component={Home} />
 
         </Switch>
 
