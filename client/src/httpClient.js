@@ -67,6 +67,10 @@ httpClient.updatePost = function(id, fields) {
     return this({ method: 'patch', url: `/api/posts/${id}`, data: fields})
 }
 
+httpClient.updateUser = function(id, fields) {
+    return this({ method: 'patch', url: `/api/users/${id}`, data: fields })
+}
+
 httpClient.createPost = function(postInfo) {
     return this({ method: 'post', url: '/api/posts', data: postInfo })
 

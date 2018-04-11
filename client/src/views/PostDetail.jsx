@@ -77,12 +77,12 @@ class PostDetail extends React.Component {
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <Label for="body">Title</Label>
+                                    <Label for="body">Body</Label>
                                     <Input ref="body" innerRef="body" type="text" id="body" defaultValue={details.body} />
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <Label for="link">Title</Label>
+                                    <Label for="link">Link</Label>
                                     <Input ref="link" innerRef="link" type="text" id="link" defaultValue={details.link} />
                                 </FormGroup>
 
