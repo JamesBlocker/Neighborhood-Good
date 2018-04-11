@@ -12,12 +12,13 @@ class Posts extends React.Component {
     }
 
     render() {
+        console.log(this.state.posts)
         return (
             <div className="Posts">
                 <h1>Post Feed</h1>
                 <ul>
                     {this.state.posts.map((p) => {
-                        return <li key={p._id}>{p.title}</li>
+                        return <li key={p._id}>{p.title} - {p._id}</li>
                     })}
                 </ul>
             </div>

@@ -55,6 +55,18 @@ httpClient.getPosts = function() {
     return this({ method: 'get', url: '/api/posts' })
 }
 
+httpClient.getPost = function(id) {
+    return this({ method: 'get', url: `/api/posts/${id}` })
+}
+
+httpClient.deletePost = function(id) {
+    return this({ method: 'delete', url: `/api/posts/${id}` })
+}
+
+httpClient.updatePost = function(id, fields) {
+    return this({ method: 'patch', url: `/api/posts/${id}`, data: fields})
+}
+
 httpClient.createPost = function(postInfo) {
     return this({ method: 'post', url: '/api/posts', data: postInfo })
 
