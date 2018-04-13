@@ -1,6 +1,8 @@
 import React from 'react'
 import httpClient from '../httpClient'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap'
+import { Link } from 'react-router-dom'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap'
+import PostDetail from './PostDetail'
 
 class Profile extends React.Component {
 
@@ -26,11 +28,6 @@ class Profile extends React.Component {
         }
         httpClient.updatePost(this.props.match.params.id, postFormFields).then((serverResponse) => {
             console.log(serverResponse.data.fields.name)
-            
-            // this.setState({
-            //     modalOpen: false,
-            //     fields: serverResponse.data.user
-            // })
         })
     }
 
@@ -48,9 +45,8 @@ class Profile extends React.Component {
         const currentUser = httpClient.getCurrentUser()._id
         return (
             <div>
-                <h1>Profile</h1>
-                <h2>{this.state.fields.name}</h2>
-                <Button onClick={this.handleEditClick.bind(this)}>Edit</Button>
+                <h1>{this.state.fields.name}</h1>
+                {/* <Button onClick={this.handleEditClick.bind(this)}>Edit</Button> */}
            
                 <Modal isOpen={modalOpen}>
                     <ModalHeader>Edit Profile</ModalHeader>
@@ -74,12 +70,21 @@ class Profile extends React.Component {
                     </Form>
                 </Modal>
 
-                <ul>
-                    {/* if(this.state.posts.user._id === httpClient.getCurrentUser) {} */}
+                {/* <ul> */}
                     {this.state.posts.map((p) => {
-                        if(p.user._id === currentUser) return <li key={p._id}>{p.title} - {p._id} - {p.user._id}</li>
+                        if(p.user._id === currentUser) return (
+                            <Row key={p._id} className="low-margin">
+                                <Col xs="3">
+                                    <Link className="btn btn-warning"to={`/posts/${p._id}`}>&#2011;</Link>
+                                </Col>
+                                <Col xs="auto">
+                                    {p.title}
+                                </Col>
+                            </Row>
+                            
+                        )
                     })}
-                </ul>
+                {/* </ul> */}
            
             </div>
         )

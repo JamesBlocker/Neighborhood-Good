@@ -1,6 +1,6 @@
 import React from 'react'
 import httpClient from '../httpClient'
-// import { ServerResponse } from 'http';
+import { Button, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap'
 
 class NewPost extends React.Component {
 
@@ -29,13 +29,31 @@ class NewPost extends React.Component {
         return (
             <div className="NewBar">
                 <h1>New Post</h1>
-                <form onChange={this.handleFormChange.bind(this)} onSubmit={this.handleFormSubmit.bind(this)}>
-                <input name="title" type="text" placeholder="Title" value={title} />
-                <input name="body" type="text" placeholder="Body" value={body} />
-                <input name="link" type="text" placeholder="Link" value={link} />
-                <input name="image_url" type="text" placeholder="Image Url" value={image_url} />
-                <button>Submit</button>
-                </form>
+                <Row>
+                    <Col className="col-3"></Col>
+                    <Col className="auto">
+                        <Form className="small-form"onChange={this.handleFormChange.bind(this)} onSubmit={this.handleFormSubmit.bind(this)}>
+                            <FormGroup>
+                                {/* <Label for="title">Title</Label> */}
+                                <Input name="title" type="text" placeholder="Title" value={title} />
+                            </FormGroup>
+                            <FormGroup>
+                                {/* <Label for="body">Body</Label> */}
+                                <Input className="text-heighth" name="body" type="textarea" rows="6" placeholder="Body" value={body} />
+                            </FormGroup>
+                            <FormGroup>
+                                {/* <Label for="link">Web Link</Label> */}
+                                <Input name="link" type="text" placeholder="Link" value={link} />
+                            </FormGroup>
+                            <FormGroup>
+                                {/* <Label for="image_url">Image Url</Label> */}
+                                <Input name="image_url" type="text" placeholder="Image Url" value={image_url} />                        
+                            </FormGroup>
+                            <Button>Submit</Button>
+                        </Form>
+                    </Col>
+                    <Col className="col-3"></Col>
+                </Row>
             </div>
         )
     }
