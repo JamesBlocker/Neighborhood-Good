@@ -26,7 +26,7 @@ class Posts extends React.Component {
                 </ul> */}
                 {reverseList.map((p) => {
                     return (
-                        <Card key={p.id}>
+                        <Card key={p._id}>
                             <CardImg top width="100%" src={p.image_url} alt="Card image cap" />
                             <CardBody>
                             <CardTitle>{p.title}</CardTitle>
