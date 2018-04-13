@@ -1,7 +1,7 @@
 import React from 'react'
 import httpClient from '../httpClient'
-import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Link } from 'react-router-dom'
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row, Col } from 'reactstrap';
 
 class Posts extends React.Component {
     state = { posts: [] }
@@ -26,15 +26,21 @@ class Posts extends React.Component {
                 </ul> */}
                 {reverseList.map((p) => {
                     return (
-                        <Card key={p._id}>
-                            <CardImg top width="100%" src={p.image_url} alt="Card image cap" />
-                            <CardBody>
-                            <CardTitle>{p.title}</CardTitle>
-                            <CardSubtitle>{p.link}</CardSubtitle>
-                            <CardText>{p.body}</CardText>
-                            <Button>read more</Button>
-                            </CardBody>
-                        </Card>
+                        <Row key={p._id}>
+                            <Col sm="2"></Col>
+                            <Col sm="auto">
+                                <Card key={p._id}>
+                                    <CardImg top width="100%" src={p.image_url} alt="Card image cap" />
+                                    <CardBody>
+                                    <CardTitle>{p.title}</CardTitle>
+                                    <CardSubtitle><a href={p.link}>{p.link}</a></CardSubtitle>
+                                    <CardText>{p.body}</CardText>
+                                    <Link className="btn btn-warning"to={`/posts/${p._id}`}>More</Link>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                            <Col sm="2"></Col>    
+                        </Row>                        
                     )
                 })}
 

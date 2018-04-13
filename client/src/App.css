@@ -31,6 +31,7 @@
   margin-bottom: 10px;
 }
 
-/* .text-heighth {
-  height: 350px;
-} */
+.card {
+  min-width: 750px;
+  max-width: 750px;;
+}

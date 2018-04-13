@@ -2,7 +2,7 @@ import React from 'react'
 import httpClient from '../httpClient'
 import { Link } from 'react-router-dom'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap'
-import PostDetail from './PostDetail'
+// import PostDetail from './PostDetail'
 
 class Profile extends React.Component {
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import httpClient from './httpClient'
 import {
     Collapse,
@@ -31,7 +31,6 @@ export default class Example extends React.Component {
     render() {
 
         const user = httpClient.getCurrentUser()
-
         {if(user) {
             return (
                 <div>
@@ -77,7 +76,6 @@ export default class Example extends React.Component {
                   </Navbar>
                 </div>
               );
-        
             } else {
                 return (
                     <div>

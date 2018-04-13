@@ -1,5 +1,7 @@
 import React from 'react'
 import httpClient from '../httpClient'
+import { Button, Form, FormGroup, Input, Row, Col } from 'reactstrap'
+
 
 class SignUp extends React.Component {
 
@@ -22,7 +24,7 @@ class SignUp extends React.Component {
             this.setState({ fields: { name: '', email: '', password: '' } })
             if(user) {
                 this.props.onSignUpSuccess(user)
-                this.props.history.push('/')
+                this.props.history.push('/posts')
             }
         })
     }
@@ -30,18 +32,26 @@ class SignUp extends React.Component {
     render() {
         const { name, email, password } = this.state.fields
         return (
-            <div className='SignUp'>
-				<div className='row'>
-					<div className='column column-33 column-offset-33'>
-						<h1>Sign Up</h1>
-						<form onChange={this.onInputChange.bind(this)} onSubmit={this.onFormSubmit.bind(this)}>
-							<input type="text" placeholder="Name" name="name" value={name} />
-							<input type="text" placeholder="Email" name="email" value={email} />
-							<input type="password" placeholder="Password" name="password" value={password} />
-							<button>Sign Up</button>
-						</form>
-					</div>
-				</div>
+            <div>
+				<Row>
+                    <Col sm="3"></Col>
+                    <Col>   
+                            <h1>Sign Up</h1>
+                            <Form onChange={this.onInputChange.bind(this)} onSubmit={this.onFormSubmit.bind(this)}>
+                                <FormGroup>
+                                    <Input sm={10} type="text" placeholder="Name" name="name" value={name} />
+                                </FormGroup>
+                                <FormGroup>
+                                    <Input type="text" placeholder="Email" name="email" value={email} />
+                                </FormGroup>
+                                <FormGroup>
+                                    <Input type="password" placeholder="Password" name="password" value={password} />
+                                </FormGroup>
+                                <Button>Sign Up</Button>
+                            </Form>
+                    </Col>    
+                    <Col sm="3"></Col>                    
+               </Row>   
 			</div>
         )
     }
