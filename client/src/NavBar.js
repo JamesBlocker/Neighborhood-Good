@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import './NavBar.css';
 import httpClient from './httpClient'
 import {
     Collapse,
@@ -34,8 +34,8 @@ export default class Example extends React.Component {
         {if(user) {
             return (
                 <div>
-                  <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/posts">Feed</NavbarBrand>
+                  <Navbar className="colour" light expand="md">
+                    <NavbarBrand className="letter-color" href="/posts">Feed</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                       <Nav className="ml-auto" navbar>

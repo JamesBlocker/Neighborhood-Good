@@ -21,6 +21,7 @@ class SignUp extends React.Component {
     onFormSubmit(evt) {
         evt.preventDefault()
         httpClient.signUp(this.state.fields).then(user => {
+            console.log(user)
             this.setState({ fields: { name: '', email: '', password: '' } })
             if(user) {
                 this.props.onSignUpSuccess(user)
