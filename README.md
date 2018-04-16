@@ -6,7 +6,7 @@ A community portal to connect neighbors with the local events that are important
 
 # Technologies Used
 
-1. NodeJS, React, Javascript, JSON, JQuery, HTML, CSS, Bootstrap, API, NPM Packages (Axios, Bcrypt-nodejs, body-parser, connect-flash, connect-mongodb-session, cookie-parser, dotenv, ejs, express, express-ejs-layouts, express-session, method-override, mongoose, morgan, passport, passport-local, watson-developer-cloud)
+1. NodeJS, React, Javascript, JSON, JQuery, HTML, CSS, Bootstrap, API, NPM Packages (Axios, Bcrypt-nodejs, body-parser, connect-flash, connect-mongodb-session, dotenv, ejs, express, express-ejs-layouts, express-session, method-override, mongoose, morgan)
 
 # User Stories
 
