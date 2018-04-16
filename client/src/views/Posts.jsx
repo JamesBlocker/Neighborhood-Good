@@ -30,7 +30,7 @@ class Posts extends React.Component {
                                     <CardImg top width="100%" src={p.image_url} alt="Card image cap" />
                                     <CardBody>
                                     <CardTitle>{p.title}</CardTitle>
-                                    <CardSubtitle><a href={p.link}>{p.link}</a></CardSubtitle>
+                                    <CardSubtitle><a href={p.link} target="_blank">{p.link.slice(0,20)}</a></CardSubtitle>
                                     <CardText>{p.body.slice(0,90) + "..."}</CardText>
                                     <Link className="btn btn-warning"to={`/posts/${p._id}`}>More</Link>
                                     </CardBody>
