@@ -1,7 +1,7 @@
 # Neighborhood Good 
 A community portal to connect neighbors with the local events that are important and fun to them
 
-### Etch App
+### Neighborhood Good
 <https://neighborhood-good.herokuapp.com/>
 
 # Technologies Used
