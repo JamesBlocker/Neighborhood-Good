@@ -79,7 +79,7 @@ export default class Example extends React.Component {
             } else {
                 return (
                     <div>
-                      <Navbar color="light" light expand="md">
+                      <Navbar className="colour" light expand="md">
                         <NavbarBrand href="/">Home</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
