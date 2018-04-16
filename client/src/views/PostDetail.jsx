@@ -63,7 +63,7 @@ class PostDetail extends React.Component {
             
                 <div className="PostDetail" style={ {textAlign: 'center'} }>
                     <h1>{details.title}</h1>
-                    <img src={details.image_url} alt={details.title} />
+                    <img className="full-image"src={details.image_url} alt={details.title} />
                     
                     <p>{details.body}</p>
                     <a href={details.link} target="_blank">{details.link.slice(0,20)}</a>

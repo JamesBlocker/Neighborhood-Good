@@ -40,6 +40,6 @@ body {
   background: whitesmoke;
 }
 
-nav {
-  background: blue;
+.full-image {
+  max-width: 100%;
 }
