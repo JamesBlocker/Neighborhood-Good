@@ -4,6 +4,8 @@ A community portal to connect neighbors with the local events that are important
 ### Neighborhood Good
 <https://neighborhood-good.herokuapp.com/>
 
+![Imgur](https://i.imgur.com/nQWuVD5.png)
+
 # Technologies Used
 
 1. NodeJS, React, Javascript, JSON, JQuery, HTML, CSS, Bootstrap, API, NPM Packages (Axios, Bcrypt-nodejs, body-parser, connect-flash, connect-mongodb-session, dotenv, ejs, express, express-ejs-layouts, express-session, method-override, mongoose, morgan)
