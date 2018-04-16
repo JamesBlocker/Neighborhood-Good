@@ -28,11 +28,8 @@ A community portal to connect neighbors with the local events that are important
 <https://trello.com/b/WsvsAuMG>
 
 ### Wireframe 
+![Imgur](https://i.imgur.com/lWuM1DN.png)
 
-![Imgur](https://i.imgur.com/1CxQsTX.png)
+![Imgur](https://i.imgur.com/R9B1IoA.png)
 
-![Imgur](https://i.imgur.com/v0SbCUP.png)
-
-![Imgur](https://i.imgur.com/hN7RvE2.png)
-
-![Imgur](https://i.imgur.com/6gcpecb.png)
+![Imgur](https://i.imgur.com/hNEvwQD.png)
